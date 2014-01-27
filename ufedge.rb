@@ -1,13 +1,13 @@
 #!/usr/bin/ruby
 
-# download lectures from uf edge
+# download lectures from kh
 #
-# usage: ufedge.rb <course_code> <number of lectures>
+# usage: ufedge.rb <number of pages>
 
 count = 1
 
-while count <= ARGV[1].to_i do
+while count <= ARGV[0].to_i do
   class_number = "%02d" % count
-  puts("<a href=\"http://www.ufedge.ufl.edu/vs/download.php?f=#{ARGV[0]}_#{class_number}-hh.mp4\">#{class_number}-hh.mp4</a>");
+  puts("<a href=\"http://media1.greatrivertech.net.s3.amazonaws.com/Larson/eBook/data/pages/{count}.swf">#{count}.swf</a>");
   count += 1
 end
